@@ -13,7 +13,7 @@ grid-template-areas:
 'four five six minus'
 'one two three times'
 'clear zero equals divide';
-width: 40%;
+width: 30%;
 text-align: center;
 font-size: 30px;
 }
