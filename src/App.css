@@ -1,41 +1,105 @@
-.App {
+* {
   text-align: center;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif; 
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.content {
+margin: auto;
+display: grid;
+grid-template-areas:
+'header header header header'
+'seven eight nine plus'
+'four five six minus'
+'one two three times'
+'clear zero equals divide';
+width: 40%;
+text-align: center;
+font-size: 30px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.calcu {
+font-size: 40px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.item-2, .item-3, .item-4, .item-5, .item-6, .item-7, .item-8, .item-9, .item-10, .item-11, .item-12, .item-13, .item-14, .item-15, .item-16, .item-17 {
+border: 1px solid black;
+border-radius: 3px;
+background-color: azure;
+padding: 5px;
 }
 
-.App-link {
-  color: #61dafb;
+
+.item-1 {
+grid-area: header;
+background-color: black;
+color: white;
+font-size: 30px;
+text-align: right;
+padding: 10px;
+height: 50px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.item-2 {
+grid-area: seven;
 }
 
-body { min-height: 120px; }
-.avatar { margin: 20px; border-radius: 50%; }
+.item-3 {
+grid-area: eight;
+}
+
+.item-4 {
+grid-area: nine;
+}
+
+.item-5 {
+grid-area: plus;
+}
+
+.item-6 {
+grid-area: four;
+}
+
+.item-7 {
+grid-area: five;
+}
+
+.item-8 {
+grid-area: six;
+}
+
+.item-9 {
+grid-area: minus;
+}
+
+.item-10 {
+grid-area: one;
+}
+
+.item-11 {
+grid-area: two;
+}
+
+.item-12 {
+grid-area: three;
+}
+
+.item-13 {
+grid-area: times;
+}
+
+.item-14 {
+grid-area: clear;
+}
+
+.item-15 {
+grid-area: zero;
+}
+
+.item-16 {
+grid-area: equals;
+}
+
+.item-17 {
+grid-area: divide;
+}
