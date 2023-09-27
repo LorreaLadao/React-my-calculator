@@ -20,7 +20,8 @@ body {
   padding: 10px;
   line-height: 60px;
   text-align: left;
-  background: linear-gradient(90deg, rgba(69, 8, 103, 1) 0%, rgb(61, 26, 141) 37%, rgb(199, 0, 83) 100%);  font-size: 2em;
+  background: linear-gradient(90deg, rgba(69, 8, 103, 1) 0%, rgb(61, 26, 141) 37%, rgb(199, 0, 83) 100%);  
+  font-size: 2rem;
   color: rgb(253, 255, 154);
   margin: auto;
   margin-top: 3%;
@@ -44,8 +45,8 @@ body {
 
 button {
   height: 50px;
-  width: 200px;
-  font-size: 20px;
+  width: 20%;
+  font-size: 1rem;
   background-color: rgb(42, 12, 70);
   color: white;
   border-image: linear-gradient(to right, rgb(237, 0, 162), darkorchid, rgb(255, 241, 150)) 1;
