@@ -41,8 +41,8 @@ function App() {
       < CalcButton label={0}/> 
       < CalcButton label={"="}/> 
       < CalcButton label={"÷"}/> 
+      <button className='surname'> Ladao </button>
     </div> 
-    <button className='surname'> Ladao </button>
   </div>
   );
 }
