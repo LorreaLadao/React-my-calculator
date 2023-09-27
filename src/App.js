@@ -1,8 +1,12 @@
 import './App.css';
 
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Caveat&family=Dancing+Script&family=Fjalla+One&family=Phudu&family=Poppins:wght@300&family=Rajdhani:wght@300&display=swap');
+</style>
+
 function CalcButton({label}) {
   return (
-    <button>
+    <button className='CalcButton'>
       {label}
     </button>
   );
@@ -38,6 +42,7 @@ function App() {
       < CalcButton label={"="}/> 
       < CalcButton label={"÷"}/> 
     </div> 
+    <button className='surname'> Ladao </button>
   </div>
   );
 }
