@@ -1,5 +1,4 @@
-import React from 'react';
-import { useState } from "react";
+import React, { useState } from 'react';
 import './App.css';
 
 function CalcButton({ label, onClick, buttonClassName = "CalcButton" }) {
@@ -19,7 +18,6 @@ function Display({ display }) {
 }
 
 export default function App() {
-
   const [disp, setDisp] = useState(0);
   const [num1, setNum1] = useState(null);
   const [oper, setOper] = useState(null);
@@ -28,7 +26,7 @@ export default function App() {
   const numberButton = (e) => {
     e.preventDefault();
     const value = e.target.innerHTML;
-    var num = value;
+    let num = value;
     if (oper === null) {
       if (num1 !== null) {
         num = num1 + num;
@@ -47,29 +45,38 @@ export default function App() {
   const operator = (e) => {
     e.preventDefault();
     const value = e.target.innerHTML;
+    if (num1 !== null && num2 !== null && oper !== null) {
+      // If it's not a new calculation, perform the previous calculation
+      equalOperator(e);
+      // Set the result as the first operand for the next calculation
+      setNum1(disp);
+      setNum2(null);
+    }
     setOper(value);
     setDisp(value);
   }
 
   const equalOperator = (e) => {
     e.preventDefault();
-
-    if (oper === "+") {
-      setDisp(parseInt(num1) + parseInt(num2));
-    } else if (oper === "-") {
-      setDisp(parseInt(num1) - parseInt(num2));
-    } else if (oper === "*") {
-      setDisp(parseInt(num1) * parseInt(num2));
-    } else if (oper === "÷") {
-      setDisp(parseInt(num1) / parseInt(num2));
-    } else {
-      setDisp("ERROR");
+    if (num1 !== null && num2 !== null && oper !== null) {
+      let result;
+      if (oper === "+") {
+        result = parseInt(num1) + parseInt(num2);
+      } else if (oper === "-") {
+        result = parseInt(num1) - parseInt(num2);
+      } else if (oper === "*") {
+        result = parseInt(num1) * parseInt(num2);
+      } else if (oper === "÷") {
+        result = parseInt(num1) / parseInt(num2);
+      }
+      setDisp(result);
+      setNum1(result);
+      setNum2(null);
     }
   }
 
   const clear = (e) => {
     e.preventDefault();
-
     setDisp(0);
     setNum1(null);
     setOper(null);
@@ -87,7 +94,7 @@ export default function App() {
       <h1> Calculator of Lorrea Ladao - IT3A</h1>
         <Display display={disp} />
         <div className="ButtonContainer">
-          <CalcButton label={7} onClick={numberButton} buttonClassName={"CalcButtonNum"}/>
+           <CalcButton label={7} onClick={numberButton} buttonClassName={"CalcButtonNum"}/>
           <CalcButton label={8} onClick={numberButton} buttonClassName={"CalcButtonNum"}/>
           <CalcButton label={9} onClick={numberButton} buttonClassName={"CalcButtonNum"}/>
           <CalcButton label={"+"} onClick={operator} buttonClassName={"CalcButtonNum"} />
