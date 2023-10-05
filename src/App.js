@@ -109,6 +109,6 @@ export default function App() {
           <CalcButton label={"LADAO"} onClick={nameClickHandler} buttonClassName={"CalcButtonName"}/>
         </div>
       </div>
-
+      </div>
   );
 }
