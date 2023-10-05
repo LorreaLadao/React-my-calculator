@@ -109,22 +109,6 @@ export default function App() {
           <CalcButton label={"LADAO"} onClick={nameClickHandler} buttonClassName={"CalcButtonName"}/>
         </div>
       </div>
-      <div className="Notes">
-          <p>Additional Requirements:
-            <ul>
-              <li>
-                At the top add your Calculator of Fullname and Section (e.g Calculator of Juan Dela Cruz - IT3A) instead of "Mini Calculator".
-              </li>            
-              <li>
-                Add an additional button at the bottom (e.g. VELASCO button in the example) with your Surname.            
-              </li>
-              <li>
-                When the surname button is clicked, display your fullname in the calculator's display (e.g Juan Dela Cruz)
-              </li>
-            </ul>
-            Note: Feel free to design your calculator.
-          </p>
-        </div>
-    </div>
+
   );
 }
