@@ -9,13 +9,15 @@ body {
 h1 {
   font-size: 1rem;
   color: white;
+  margin: 30px;
 }
 
 .CalcContainer {
   margin: auto;
   background-color: rgb(10, 8, 10);
   margin-top: 5%;
-  width: 20%;
+  height: 450px;
+  width: 23%;
   border-radius: 20px;
   border: 1px solid white;
 }
@@ -28,26 +30,28 @@ h1 {
   text-align: right;
   background-color: rgb(255, 255, 255);
   border-radius: 10px;
-  font-size: 1em;
+  font-size: 1.3em;
   color: rgb(46, 7, 68);
   margin: auto;
-  margin-top: 3%;
+  margin-top: 10%;
   margin-bottom: 3px;
 }
 
 .ButtonContainer {
   margin: auto;
+  margin-top: 5%;
   width: 100%;
   font-size: 20px;
 }
 
 .CalcButtonNum {
-  font-size: 20px;
-  width: 22%;
+  font-size: 25px;
+  width: 21.5%;
   background-color: rgb(0, 0, 0, 0);
   color: white;
-  margin: 0;
+  margin: 3px 1px;
   border: 0px solid white;
+  
 }
 
 button {
